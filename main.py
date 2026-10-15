@@ -8,34 +8,34 @@ from quick_sort import quick_sort
 
 
 def main():
-    print("--- 1. ПРОВЕРКА МАССИВА ---")
+    print("проверка массива")
     arr = FixedArray(3)
     arr.set(0, "First")
     arr.set(1, "Second")
     print("Index 0:", arr.get(0))
     print("Index 1:", arr.get(1))
 
-    print("\n--- 2. ПРОВЕРКА СПИСКА ---")
+    print("\n проверка списка")
     ll = LinkedList()
     ll.append(10)
     ll.append(20)
     print("Head:", ll.head.value)
     print("Next:", ll.head.next.value)
 
-    print("\n--- 3. ПРОВЕРКА ДЕКА ---")
+    print("\n проверка дека")
     d = Deque()
     d.append_left("Left")
     d.append_right("Right")
     print("Pop Left:", d.pop_left())
     print("Pop Right:", d.pop_right())
 
-    print("\n--- 4. ПРОВЕРКА АВЛ-ДЕРЕВА ---")
+    print("\n проверка арл дерева")
     tree = AVLTree()
-    for num in [10, 20, 30, 5, 15]:   # <-- здесь был пропущен список
+    for num in [10, 20, 30, 5, 15]:
         tree.insert(num)
     print("Inorder:", tree.inorder())
 
-    print("\n--- 5. ПРОВЕРКА СОРТИРОВОК ---")
+    print("\n проверка сортировок")
     test_data = [random.randint(1, 100) for _ in range(5)]
     print("Original:", test_data)
     print("Bubble:", bubble_sort(test_data.copy()))
